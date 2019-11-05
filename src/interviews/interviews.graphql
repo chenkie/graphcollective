@@ -1,0 +1,18 @@
+type Interview {
+  id: ID!
+  title: String!
+  description: String!
+  interviewee: [Interviewee!]!
+}
+
+type Interviewee {
+  id: ID!
+  name: String!
+  twitter: String!
+  bio: String!
+}
+
+type Query {
+  interviews: [Interview!]!
+  interview(id: ID!): Interview!
+}
